@@ -13,6 +13,9 @@ import HomeScreen from './pages/HomeScreen';
 import DetailsScreen from './pages/DetailsScreen';
 import ProfileScreen from './pages/ProfileScreen';
 import SettingsScreen from './pages/SettingsScreen';
+import Login from './pages/login';
+import Signup from './pages/signup';
+import Dashboard from './pages/dashboard';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -28,13 +31,18 @@ function HomeStack() {
       }}>
       <Stack.Screen
         name="Home"
-        component={HomeScreen}
+        component={Login}
         options={{ title: 'Home Page' }}
       />
       <Stack.Screen
         name="Details"
-        component={DetailsScreen}
+        component={Signup}
         options={{ title: 'Details Page' }}
+      />
+            <Stack.Screen
+        name="Dashboard"
+        component={Dashboard}
+        options={{ title: 'Dashboard Page' }}
       />
     </Stack.Navigator>
   );
@@ -61,7 +69,7 @@ function SettingsStack() {
       />
       <Stack.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={Signup}
         options={{ title: 'Profile Page' }}
       />
     </Stack.Navigator>
@@ -93,7 +101,7 @@ function App() {
             tabBarLabel: 'Settings',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
-                name="settings"
+                name="application-settings"
                 color={color}
                 size={size}
               />

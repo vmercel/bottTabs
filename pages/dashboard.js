@@ -5,7 +5,7 @@ import * as React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 
 
-const ProfileScreen = () => {
+const Dashboard = () => {
     return ( <
         SafeAreaView style = {
             { flex: 1 }
@@ -14,7 +14,7 @@ const ProfileScreen = () => {
         View style = {
             { flex: 1, padding: 16 }
         } >
-        
+
         <
         View style = {
             {
@@ -48,4 +48,4 @@ const ProfileScreen = () => {
         /SafeAreaView>
     );
 };
-export default ProfileScreen;
+export default Dashboard;
